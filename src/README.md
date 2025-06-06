@@ -8,7 +8,7 @@
 - `groups` para listar os grupos do usuário atual
     - `groups robson` para listar os grupos do usuário "robson"
 - `su - robson` para trocar para o usuário "robson"
-- `logout` para sair da sessão do usuário atual
+- `exit` para sair do usuário "robson" e voltar para o usuário atual
 - `sudo groupadd projetos` para criar um novo grupo chamado "projetos"
 - `sudo usermod -aG projetos robson` para adicionar o usuário "robson" ao grupo "projetos"
 - `sudo vi /etc/group` para editar o arquivo de grupos
@@ -33,3 +33,7 @@
     - 0: --- (nenhuma permissão)
 - `sudo chmod 770 /projetos` para alterar as permissões do diretório "/projetos" para "770" (7 - rwx - usuário com controle total, 7 - rwx - grupo com controle total, 0 - --- - outros sem permissões)
 - `sudo chmod 774 /projetos` para alterar as permissões do diretório "/projetos" para "774" (7 - rwx - usuário com controle total, 7 - rwx - grupo com controle total, 4 - r-- - outros podem ler)
+- `sudo chmod u-r` para remover a permissão de leitura para o usuário proprietário
+    - `sudo chmod g-r` para remover a permissão de leitura para o grupo
+    - `sudo chmod o-r` para remover a permissão de leitura para outros usuários
+- `sudo chmod g+s /projetos` para definir o bit de setgid no diretório "/projetos". Isso garante que novos arquivos criados dentro do diretório herdem o grupo do diretório, em vez do grupo do usuário que os criou.
