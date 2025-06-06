@@ -13,9 +13,13 @@
 - `sudo usermod -aG projetos robson` para adicionar o usuário "robson" ao grupo "projetos"
 - `sudo vi /etc/group` para editar o arquivo de grupos
 - `sudo userdel robson` para deletar o usuário "robson"
-- `sude groupdel projetos` para deletar o grupo "projetos"
-- `ls - l /var` para listar os arquivos e diretórios em /var
-- `sudo chmod -R 755 /var` para alterar as permissões de todos os arquivos e diretórios em "/var" para "755" (7 - rwx - usuário com controle total, 5 - r-x - grupo pode ler e executar, 5 - r-x - outros podem ler e executar)
+- `sudo groupdel projetos` para deletar o grupo "projetos"
+- `sudo mkdir /projetos` para criar o diretório "/projetos". Criado como root, o usuário "robson" não terá permissão para acessar.
+- `sudo chown robson:projetos /projetos` para alterar o proprietário do diretório "/projetos" para o usuário "robson" e o grupo "projetos"
+    - `sudo chown robson /projetos` para alterar o proprietário do diretório "/projetos" para o usuário "robson" (sem alterar o grupo)
+    - `sudo chown :projetos /projetos` para alterar o grupo do diretório "/projetos" para o grupo "projetos" (sem alterar o proprietário)
+- `ls - l /projetos` para listar os arquivos e diretórios em "/projetos"
+- `sudo chmod -R 755 /projetos` para alterar as permissões de todos os arquivos e diretórios em "/projetos" para "755" (7 - rwx - usuário com controle total, 5 - r-x - grupo pode ler e executar, 5 - r-x - outros podem ler e executar)
     > File Permissions:
     Dado **drwxrwxrwx** ou **-rwxrwxrws**: Arquivo '**-**', diretório '**d**', ou link simbólico '**l**'.Permissões de leitura '**r**', escrita '**w**' e execução '**x**' para o proprietário, grupo e outros usuários. 
     Representado por números:
@@ -27,3 +31,5 @@
     - 2: -w- (escrita)
     - 1: --x (execução)
     - 0: --- (nenhuma permissão)
+- `sudo chmod 770 /projetos` para alterar as permissões do diretório "/projetos" para "770" (7 - rwx - usuário com controle total, 7 - rwx - grupo com controle total, 0 - --- - outros sem permissões)
+- `sudo chmod 774 /projetos` para alterar as permissões do diretório "/projetos" para "774" (7 - rwx - usuário com controle total, 7 - rwx - grupo com controle total, 4 - r-- - outros podem ler)
