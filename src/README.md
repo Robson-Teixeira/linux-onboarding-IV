@@ -37,3 +37,4 @@
     - `sudo chmod g-r` para remover a permissão de leitura para o grupo
     - `sudo chmod o-r` para remover a permissão de leitura para outros usuários
 - `sudo chmod g+s /projetos` para definir o bit de setgid no diretório "/projetos". Isso garante que novos arquivos criados dentro do diretório herdem o grupo do diretório, em vez do grupo do usuário que os criou.
+- `ln -s /projetos /home/robson/projetos` para criar um link simbólico do diretório "/projetos" no diretório home do usuário "robson". Isso permite que o usuário "robson" acesse o diretório "/projetos" através do link simbólico. Apagar o link simbólico não afeta o diretório original.
