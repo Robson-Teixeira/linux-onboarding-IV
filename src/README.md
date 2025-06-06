@@ -42,5 +42,8 @@
     - `sudo apt-get install apache2` é um comando alternativo para instalar o Apache
     - `yum install apache2` é usado em distribuições baseadas em Red Hat, como CentOS ou Fedora
 - `sudo apt update` para atualizar a lista de pacotes disponíveis
+- `apt list --upgradable` para listar os pacotes que podem ser atualizados
 - `sudo apt upgrade` para atualizar os pacotes instalados
 - `apt search apache2` para pesquisar pacotes relacionados ao Apache. A pesquisa é realizada no repositório local, não na internet.
+- `sudo apt remove apache2` para remover o pacote Apache
+- `sudo apt autoremove` para remover pacotes que foram instalados como dependências e não são mais necessários
