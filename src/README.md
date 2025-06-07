@@ -43,6 +43,7 @@
     - `yum install apache2` é usado em distribuições baseadas em Red Hat, como CentOS ou Fedora
 - `sudo apt update` para atualizar a lista de pacotes disponíveis
 - `apt list --upgradable` para listar os pacotes que podem ser atualizados
+- `apt list --installed` para listar todos os pacotes instalados
 - `sudo apt upgrade` para atualizar os pacotes instalados
 - `apt search apache2` para pesquisar pacotes relacionados ao Apache. A pesquisa é realizada no repositório local, não na internet.
 - `sudo apt remove apache2` para remover o pacote Apache
