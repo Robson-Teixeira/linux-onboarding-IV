@@ -48,3 +48,14 @@
 - `apt search apache2` para pesquisar pacotes relacionados ao Apache. A pesquisa é realizada no repositório local, não na internet.
 - `sudo apt remove apache2` para remover o pacote Apache
 - `sudo apt autoremove` para remover pacotes que foram instalados como dependências e não são mais necessários
+- `apt show` para exibir informações detalhadas sobre um pacote específico
+- `sudo ls lshw` para listar o hardware do sistema
+- `sudo ls lshw -c disk` para listar apenas os discos do sistema
+- `sudo fdisk -l` para listar as partições do sistema
+- `sudo fdisk /dev/sdb` para editar as partições do disco /dev/sdb
+    - `n` para criar uma nova partição
+    - `p` para criar uma partição primária
+    - `e` para criar uma partição estendida
+    - `d` para deletar uma partição
+    - `w` para salvar as alterações e sair
+    - `q` para sair sem salvar as alterações
