@@ -71,3 +71,6 @@
 - `sudo blkid` para listar os dispositivos de bloco e suas informações
 - `sudo vi /etc/fstab` para editar o arquivo de configuração de montagem automática
     - Adicionar a linha `/dev/sdb1 /media/disk2 ext4 defaults 0 2` ou `UUID=<uuid> /media/disk2 ext4 defaults 0 2` para montar a partição /dev/sdb1 automaticamente no diretório /media/disk2 na inicialização do sistema
+- `sudo umount /media/disk2` para desmontar a partição /dev/sdb1 do diretório /media/disk2
+- `sudo mount -a` para montar todas as partições listadas no arquivo /etc/fstab
+- `sudu su` para trocar para o usuário root
