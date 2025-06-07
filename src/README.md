@@ -73,4 +73,17 @@
     - Adicionar a linha `/dev/sdb1 /media/disk2 ext4 defaults 0 2` ou `UUID=<uuid> /media/disk2 ext4 defaults 0 2` para montar a partição /dev/sdb1 automaticamente no diretório /media/disk2 na inicialização do sistema
 - `sudo umount /media/disk2` para desmontar a partição /dev/sdb1 do diretório /media/disk2
 - `sudo mount -a` para montar todas as partições listadas no arquivo /etc/fstab
-- `sudu su` para trocar para o usuário root
+- `sudo su` para trocar para o usuário root
+- `sudo systemctl` para gerenciar serviços do sistema
+    - `sudo systemctl status apache2` para verificar o status do serviço Apache
+    - `sudo systemctl start apache2` para iniciar o serviço Apache
+    - `sudo systemctl stop apache2` para parar o serviço Apache
+    - `sudo systemctl restart apache2` para reiniciar o serviço Apache
+    - `sudo systemctl enable apache2` para habilitar o serviço Apache para iniciar automaticamente na inicialização do sistema
+    - `sudo systemctl disable apache2` para desabilitar o serviço Apache de iniciar automaticamente na inicialização do sistema
+- `sudo service` para gerenciar serviços do sistema
+    - `sudo service apache2 status` para verificar o status do serviço Apache (alternativa ao systemctl)
+    - `sudo service apache2 start` para iniciar o serviço Apache (alternativa ao systemctl)
+    - `sudo service apache2 stop` para parar o serviço Apache (alternativa ao systemctl)
+    - `sudo service apache2 restart` para reiniciar o serviço Apache (alternativa ao systemctl)
+    - `sudo service --status-all` para listar todos os serviços do sistema e seus status
