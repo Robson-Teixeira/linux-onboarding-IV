@@ -59,3 +59,8 @@
     - `d` para deletar uma partição
     - `w` para salvar as alterações e sair
     - `q` para sair sem salvar as alterações
+- `sudo mkfs.` para formatar uma partição
+    - `sudo mkfs -t ext4 /dev/sdb1` para formatar a partição /dev/sdb1 com o sistema de arquivos ext4
+    - `sudo mkfs -t xfs /dev/sdb1` para formatar a partição /dev/sdb1 com o sistema de arquivos XFS
+    - `sudo mkfs -t vfat /dev/sdb1` para formatar a partição /dev/sdb1 com o sistema de arquivos FAT32
+    - `sudo mkfs -t ext4 /dev/sdb1` para formatar a partição /dev/sdb1 com o sistema de arquivos ext4
