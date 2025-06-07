@@ -64,3 +64,10 @@
     - `sudo mkfs -t xfs /dev/sdb1` para formatar a partição /dev/sdb1 com o sistema de arquivos XFS
     - `sudo mkfs -t vfat /dev/sdb1` para formatar a partição /dev/sdb1 com o sistema de arquivos FAT32
     - `sudo mkfs -t ext4 /dev/sdb1` para formatar a partição /dev/sdb1 com o sistema de arquivos ext4
+- `cd /media/` para mudar para o diretório /media
+- `sudo mkdir disk2` para criar o diretório /media/disk2
+- `sudo mount /dev/sdb1 /media/disk2` para montar a partição /dev/sdb1 no diretório /media/disk2
+- `cat /etc/fstab` para listar as partições montadas automaticamente no sistema
+- `sudo blkid` para listar os dispositivos de bloco e suas informações
+- `sudo vi /etc/fstab` para editar o arquivo de configuração de montagem automática
+    - Adicionar a linha `/dev/sdb1 /media/disk2 ext4 defaults 0 2` ou `UUID=<uuid> /media/disk2 ext4 defaults 0 2` para montar a partição /dev/sdb1 automaticamente no diretório /media/disk2 na inicialização do sistema
